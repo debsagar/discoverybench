@@ -1,0 +1,177 @@
+{
+ "model": "openai/gpt-5.4",
+ "seed": 6,
+ "H": 3,
+ "tag": "sweepable",
+ "exploration": [
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      16,
+      15
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ],
+     [
+      16,
+      15
+     ],
+     [
+      16,
+      16
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      14
+     ],
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "soup",
+    "p": 0.5,
+    "seed": 1
+   },
+   "t": 5,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  }
+ ],
+ "prediction": {
+  "pred_err": 0.4544,
+  "persistence_err": 0.2957,
+  "invalid_replies": 1,
+  "n_probes": 6
+ },
+ "declaration": {
+  "parsed": true,
+  "declaration": {
+   "visible_frame_sufficient": false,
+   "n_hidden_states": 2,
+   "hidden_update_rule": "Each cell carries a refractory/phase bit that flips when the cell changes, so the next visible state depends on whether a currently identical-looking cell was recently alive or dead.",
+   "mechanism": "The visible dynamics are not first-order in the shown binary frame; they are a period-2, Life-like outer-totalistic cellular automaton on the 32x32 torus where the same visible pattern can evolve differently depending on this hidden per-cell phase. Empirically, simple seeds show strong two-step alternation and delayed expansion, indicating the rule is effectively second-order rather than ordinary memoryless Life.",
+   "confidence": 0.78
+  },
+  "truth": {
+   "markov": false,
+   "effective_H": 2
+  },
+  "posited_latent": true,
+  "h_match": true,
+  "confidence": 0.78
+ },
+ "declaration_raw": "{\"visible_frame_sufficient\":false,\"n_hidden_states\":2,\"hidden_update_rule\":\"Each cell carries a refractory/phase bit that flips when the cell changes, so the next visible state depends on whether a currently identical-looking cell was recently alive or dead.\",\"mechanism\":\"The visible dynamics are not first-order in the shown binary frame; they are a period-2, Life-like outer-totalistic cellular automaton on the 32x32 torus where the same visible pattern can evolve differently depending on this hidden per-cell phase. Empirically, simple seeds show strong two-step alternation and delayed expansion, indicating the rule is effectively second-order rather than ordinary memoryless Life.\",\"confidence\":0.78}",
+ "submitted_model": {
+  "parsed": true,
+  "model_err": 0.4686,
+  "n_hidden": 2
+ },
+ "submitted_model_raw": "{\"n_hidden\":2,\"birth\":[[0,1,2,4,5,6,7,8],[3]],\"survive\":[[1,2,4,5],[3,6,7,8]],\"h_next\":[[1,0],[0,1]]}"
+}

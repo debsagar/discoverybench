@@ -1,0 +1,157 @@
+{
+ "model": "openai/gpt-5.4",
+ "seed": 29,
+ "H": 3,
+ "tag": "sweepable",
+ "exploration": [
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      16,
+      16
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      16,
+      16
+     ],
+     [
+      16,
+      17
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      16,
+      16
+     ],
+     [
+      17,
+      16
+     ],
+     [
+      17,
+      17
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      16,
+      16
+     ],
+     [
+      16,
+      17
+     ],
+     [
+      17,
+      16
+     ],
+     [
+      17,
+      17
+     ]
+    ]
+   },
+   "t": 3,
+   "record": [
+    0,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "init": {
+    "kind": "soup",
+    "p": 0.5,
+    "seed": 1
+   },
+   "t": 2,
+   "record": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "init": {
+    "kind": "soup",
+    "p": 0.5,
+    "seed": 2
+   },
+   "t": 2,
+   "record": [
+    0,
+    1,
+    2
+   ]
+  }
+ ],
+ "prediction": {
+  "pred_err": 0.4753,
+  "persistence_err": 0.2907,
+  "invalid_replies": 0,
+  "n_probes": 6
+ },
+ "declaration": {
+  "parsed": true,
+  "declaration": {
+   "visible_frame_sufficient": false,
+   "n_hidden_states": 2,
+   "hidden_update_rule": "Each cell carries a refractory/phase bit that toggles every step, so the effective neighborhood rule alternates between two complementary phases and the visible state alone does not identify which phase applies.",
+   "mechanism": "The visible dynamics appear Life-like on a torus with a strict two-step alternation: odd steps are approximately the complement of an even-step local update, and even steps apply a neighborhood-based birth/survival rule to the prior complemented field, producing the observed all-mostly-on / patterned oscillation from simple seeds.",
+   "confidence": 0.57
+  },
+  "truth": {
+   "markov": false,
+   "effective_H": 2
+  },
+  "posited_latent": true,
+  "h_match": true,
+  "confidence": 0.57
+ },
+ "declaration_raw": "{\"visible_frame_sufficient\":false,\"n_hidden_states\":2,\"hidden_update_rule\":\"Each cell carries a refractory/phase bit that toggles every step, so the effective neighborhood rule alternates between two complementary phases and the visible state alone does not identify which phase applies.\",\"mechanism\":\"The visible dynamics appear Life-like on a torus with a strict two-step alternation: odd steps are approximately the complement of an even-step local update, and even steps apply a neighborhood-based birth/survival rule to the prior complemented field, producing the observed all-mostly-on / patterned oscillation from simple seeds.\",\"confidence\":0.57}"
+}

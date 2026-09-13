@@ -1,0 +1,174 @@
+{
+ "model": "openai/gpt-5.4",
+ "seed": 6,
+ "H": 3,
+ "tag": "sweepable",
+ "exploration": [
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ],
+     [
+      16,
+      15
+     ],
+     [
+      16,
+      16
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ],
+     [
+      15,
+      17
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      16,
+      16
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ],
+     [
+      16,
+      16
+     ]
+    ]
+   },
+   "t": 5,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "init": {
+    "kind": "soup",
+    "p": 0.5,
+    "seed": 1
+   },
+   "t": 3,
+   "record": [
+    0,
+    1,
+    2,
+    3
+   ]
+  }
+ ],
+ "prediction": {
+  "pred_err": 0.4689,
+  "persistence_err": 0.2957,
+  "invalid_replies": 0,
+  "n_probes": 6
+ },
+ "declaration": {
+  "parsed": true,
+  "declaration": {
+   "visible_frame_sufficient": false,
+   "n_hidden_states": 3,
+   "hidden_update_rule": "Each cell carries a refractory phase that advances deterministically after firing, cycling through alive -> off-1 -> off-2 -> excitable, while excitable cells may fire depending on neighbors.",
+   "mechanism": "The visible dynamics are a cyclic/refractory excitable-media cellular automaton on the 32x32 torus: a visible live cell does not behave Markovianly from the picture alone, because recently alive cells pass through hidden cooldown states before they can become visible again, and excitation of excitable cells is driven by counts/patterns of visible live neighbors. The observed single-cell and small-pattern oscillations, including identical visible frames leading to different successors across consecutive times, rule out a purely visible-state update.",
+   "confidence": 0.84
+  },
+  "truth": {
+   "markov": false,
+   "effective_H": 2
+  },
+  "posited_latent": true,
+  "h_match": false,
+  "confidence": 0.84
+ },
+ "declaration_raw": "{\"visible_frame_sufficient\":false,\"n_hidden_states\":3,\"hidden_update_rule\":\"Each cell carries a refractory phase that advances deterministically after firing, cycling through alive -> off-1 -> off-2 -> excitable, while excitable cells may fire depending on neighbors.\",\"mechanism\":\"The visible dynamics are a cyclic/refractory excitable-media cellular automaton on the 32x32 torus: a visible live cell does not behave Markovianly from the picture alone, because recently alive cells pass through hidden cooldown states before they can become visible again, and excitation of excitable cells is driven by counts/patterns of visible live neighbors. The observed single-cell and small-pattern oscillations, including identical visible frames leading to different successors across consecutive times, rule out a purely visible-state update.\",\"confidence\":0.84}"
+}

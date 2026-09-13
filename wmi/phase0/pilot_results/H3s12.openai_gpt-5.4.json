@@ -1,0 +1,171 @@
+{
+ "model": "openai/gpt-5.4",
+ "seed": 12,
+ "H": 3,
+ "tag": "certified-shallow",
+ "exploration": [
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      16,
+      15
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ],
+     [
+      16,
+      15
+     ],
+     [
+      16,
+      16
+     ]
+    ]
+   },
+   "t": 5,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      14
+     ],
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ]
+    ]
+   },
+   "t": 5,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "init": {
+    "kind": "soup",
+    "p": 0.5,
+    "seed": 1
+   },
+   "t": 3,
+   "record": [
+    0,
+    1,
+    2,
+    3
+   ]
+  }
+ ],
+ "prediction": {
+  "pred_err": 0.4355,
+  "persistence_err": 0.5413,
+  "invalid_replies": 0,
+  "n_probes": 6
+ },
+ "declaration": {
+  "parsed": true,
+  "declaration": {
+   "visible_frame_sufficient": false,
+   "n_hidden_states": 3,
+   "hidden_update_rule": "Each cell carries a refractory/age state cycling through dead-ready, alive, and dead-refractory, with the hidden state advancing deterministically based on whether the cell just fired.",
+   "mechanism": "A dead-ready cell becomes alive when it has exactly two visible live neighbors; a live cell always turns off next step; a dead-refractory cell also turns off but recovers to dead-ready after one step. Equivalently this is the 3-state excitable Greenberg-Hastings-style rule B2/S/ on a torus, so the visible frame alone is insufficient because two visually dead cells can differ by whether they are ready to be born.",
+   "confidence": 0.97
+  },
+  "truth": {
+   "markov": false,
+   "effective_H": 2
+  },
+  "posited_latent": true,
+  "h_match": false,
+  "confidence": 0.97
+ },
+ "declaration_raw": "{\"visible_frame_sufficient\":false,\"n_hidden_states\":3,\"hidden_update_rule\":\"Each cell carries a refractory/age state cycling through dead-ready, alive, and dead-refractory, with the hidden state advancing deterministically based on whether the cell just fired.\",\"mechanism\":\"A dead-ready cell becomes alive when it has exactly two visible live neighbors; a live cell always turns off next step; a dead-refractory cell also turns off but recovers to dead-ready after one step. Equivalently this is the 3-state excitable Greenberg-Hastings-style rule B2/S/ on a torus, so the visible frame alone is insufficient because two visually dead cells can differ by whether they are ready to be born.\",\"confidence\":0.97}"
+}

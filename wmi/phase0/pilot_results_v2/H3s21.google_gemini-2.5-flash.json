@@ -1,0 +1,115 @@
+{
+ "model": "google/gemini-2.5-flash",
+ "seed": 21,
+ "H": 3,
+ "tag": "certified-deep",
+ "exploration": [
+  {
+   "init": {
+    "seed": 1,
+    "kind": "soup",
+    "p": 0.5
+   },
+   "t": 9,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ]
+    ]
+   },
+   "t": 9,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "init": {
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ],
+     [
+      16,
+      15
+     ],
+     [
+      16,
+      16
+     ]
+    ],
+    "kind": "pattern"
+   },
+   "t": 9,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  }
+ ],
+ "prediction": {
+  "pred_err": 0.3634,
+  "persistence_err": 0.311,
+  "invalid_replies": 0,
+  "n_probes": 6
+ },
+ "declaration": {
+  "parsed": true,
+  "declaration": {
+   "visible_frame_sufficient": true,
+   "n_hidden_states": null,
+   "hidden_update_rule": null,
+   "mechanism": "Every live cell becomes dead in the next frame. Dead cells remain dead.",
+   "confidence": 1
+  },
+  "truth": {
+   "markov": false,
+   "effective_H": 3
+  },
+  "posited_latent": false,
+  "h_match": false,
+  "confidence": 1
+ },
+ "declaration_raw": "```json\n{\n \"visible_frame_sufficient\": true,\n \"n_hidden_states\": null,\n \"hidden_update_rule\": null,\n \"mechanism\": \"Every live cell becomes dead in the next frame. Dead cells remain dead.\",\n \"confidence\": 1\n}\n```",
+ "submitted_model": {
+  "parsed": true,
+  "model_err": 0.3634,
+  "n_hidden": 1
+ },
+ "submitted_model_raw": "```json\n{\n \"n_hidden\": 1,\n \"birth\": [\n  []\n ],\n \"survive\": [\n  []\n ],\n \"h_next\": [\n  [\n   0,\n   0\n  ]\n ]\n}\n```"
+}

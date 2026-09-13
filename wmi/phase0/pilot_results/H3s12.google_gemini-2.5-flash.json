@@ -1,0 +1,203 @@
+{
+ "model": "google/gemini-2.5-flash",
+ "seed": 12,
+ "H": 3,
+ "tag": "certified-shallow",
+ "exploration": [
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      16,
+      16
+     ]
+    ]
+   },
+   "t": 9,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      16,
+      16
+     ],
+     [
+      16,
+      17
+     ],
+     [
+      17,
+      16
+     ],
+     [
+      17,
+      17
+     ]
+    ]
+   },
+   "t": 9,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      16,
+      15
+     ],
+     [
+      16,
+      16
+     ],
+     [
+      16,
+      17
+     ]
+    ]
+   },
+   "t": 9,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "init": {
+    "cells": [
+     [
+      16,
+      16
+     ],
+     [
+      15,
+      16
+     ],
+     [
+      17,
+      16
+     ],
+     [
+      16,
+      15
+     ],
+     [
+      16,
+      17
+     ]
+    ],
+    "kind": "pattern"
+   },
+   "t": 9,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "init": {
+    "kind": "soup",
+    "seed": 123,
+    "p": 0.1
+   },
+   "t": 9,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "seed": 1,
+    "cells": [
+     [
+      16,
+      16
+     ]
+    ]
+   },
+   "t": 9,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  }
+ ],
+ "prediction": {
+  "pred_err": 0.5046,
+  "persistence_err": 0.5413,
+  "invalid_replies": 0,
+  "n_probes": 6
+ },
+ "declaration": {
+  "parsed": true,
+  "declaration": {
+   "visible_frame_sufficient": false,
+   "n_hidden_states": 1,
+   "hidden_update_rule": "Each cell has a hidden integer counter that increments if the cell is alive and resets to zero if dead, influencing its future state transitions.",
+   "mechanism": "The visible update rule, though unknown in its specifics, is highly dynamic and leads to rapid pattern evolution and complex 'soup' states, unlike standard Conway's Game of Life. A cell's next state is likely determined by its neighborhood and its hidden state.",
+   "confidence": 0.2
+  },
+  "truth": {
+   "markov": false,
+   "effective_H": 2
+  },
+  "posited_latent": true,
+  "h_match": false,
+  "confidence": 0.2
+ },
+ "declaration_raw": "```json\n{\n \"visible_frame_sufficient\": false,\n \"n_hidden_states\": 1,\n \"hidden_update_rule\": \"Each cell has a hidden integer counter that increments if the cell is alive and resets to zero if dead, influencing its future state transitions.\",\n \"mechanism\": \"The visible update rule, though unknown in its specifics, is highly dynamic and leads to rapid pattern evolution and complex 'soup' states, unlike standard Conway's Game of Life. A cell's next state is likely determined by its neighborhood and its hidden state.\",\n \"confidence\": 0.2\n}\n```"
+}

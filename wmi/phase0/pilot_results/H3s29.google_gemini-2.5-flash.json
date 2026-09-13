@@ -1,0 +1,124 @@
+{
+ "model": "google/gemini-2.5-flash",
+ "seed": 29,
+ "H": 3,
+ "tag": "sweepable",
+ "exploration": [
+  {
+   "init": {
+    "kind": "soup",
+    "p": 0.5,
+    "seed": 1
+   },
+   "t": 10,
+   "record": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ]
+    ]
+   },
+   "t": 10,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "init": {
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      10,
+      10
+     ]
+    ],
+    "kind": "pattern"
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "init": {
+    "p": 0.99999,
+    "kind": "soup",
+    "seed": 1
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ]
+    ]
+   },
+   "t": 9,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  }
+ ],
+ "prediction": {
+  "pred_err": 0.5729,
+  "persistence_err": 0.2907,
+  "invalid_replies": 0,
+  "n_probes": 6
+ },
+ "declaration": {
+  "parsed": true,
+  "declaration": {
+   "visible_frame_sufficient": false,
+   "n_hidden_states": 1,
+   "hidden_update_rule": "The single hidden state, a boolean representing the parity of the frame number, flips every frame.",
+   "mechanism": "The visible cells appear to follow a rule that depends on the current visible pattern and the hidden 'frame_number_parity' state. If the frame number is odd, the grid is mostly alive. If the frame number is even, the grid is mostly dead. Specific initial configurations (e.g. a single cell) create local deviations from this global pattern, with these local patterns also depending on the frame number parity.",
+   "confidence": 0.95
+  },
+  "truth": {
+   "markov": false,
+   "effective_H": 2
+  },
+  "posited_latent": true,
+  "h_match": false,
+  "confidence": 0.95
+ },
+ "declaration_raw": "```json\n{\n \"visible_frame_sufficient\": false,\n \"n_hidden_states\": 1,\n \"hidden_update_rule\": \"The single hidden state, a boolean representing the parity of the frame number, flips every frame.\",\n \"mechanism\": \"The visible cells appear to follow a rule that depends on the current visible pattern and the hidden 'frame_number_parity' state. If the frame number is odd, the grid is mostly alive. If the frame number is even, the grid is mostly dead. Specific initial configurations (e.g. a single cell) create local deviations from this global pattern, with these local patterns also depending on the frame number parity.\",\n \"confidence\": 0.95\n}\n```"
+}

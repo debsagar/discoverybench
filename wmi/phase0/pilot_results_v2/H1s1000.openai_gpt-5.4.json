@@ -1,0 +1,177 @@
+{
+ "model": "openai/gpt-5.4",
+ "seed": 1000,
+ "H": 1,
+ "tag": "markov-control",
+ "exploration": [
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ]
+    ]
+   },
+   "t": 6,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ]
+    ]
+   },
+   "t": 6,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      16,
+      16
+     ]
+    ]
+   },
+   "t": 6,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ],
+     [
+      16,
+      15
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ],
+     [
+      16,
+      16
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "soup",
+    "p": 0.5,
+    "seed": 1
+   },
+   "t": 3,
+   "record": [
+    0,
+    1,
+    2,
+    3
+   ]
+  }
+ ],
+ "prediction": {
+  "pred_err": 0.4539,
+  "persistence_err": 0.4325,
+  "invalid_replies": 1,
+  "n_probes": 6
+ },
+ "declaration": {
+  "parsed": true,
+  "declaration": {
+   "visible_frame_sufficient": true,
+   "n_hidden_states": null,
+   "hidden_update_rule": "No hidden per-cell state is needed.",
+   "mechanism": "The world is standard Conway's Game of Life on a 32x32 torus: each cell's next visible state depends only on the current visible frame, with live cells surviving on 2 or 3 neighbors and dead cells being born on exactly 3 neighbors, counting the eight Moore neighbors with wraparound at the edges.",
+   "confidence": 0.99
+  },
+  "truth": {
+   "markov": false,
+   "effective_H": 1
+  },
+  "posited_latent": false,
+  "h_match": false,
+  "confidence": 0.99
+ },
+ "declaration_raw": "{\"visible_frame_sufficient\":true,\"n_hidden_states\":null,\"hidden_update_rule\":\"No hidden per-cell state is needed.\",\"mechanism\":\"The world is standard Conway's Game of Life on a 32x32 torus: each cell's next visible state depends only on the current visible frame, with live cells surviving on 2 or 3 neighbors and dead cells being born on exactly 3 neighbors, counting the eight Moore neighbors with wraparound at the edges.\",\"confidence\":0.99}",
+ "submitted_model": {
+  "parsed": true,
+  "model_err": 0.1193,
+  "n_hidden": 1
+ },
+ "submitted_model_raw": "{\"n_hidden\":1,\"birth\":[[3]],\"survive\":[[2,3]],\"h_next\":[[0,0]]}"
+}

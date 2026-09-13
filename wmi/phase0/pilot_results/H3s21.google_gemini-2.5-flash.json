@@ -1,0 +1,186 @@
+{
+ "model": "google/gemini-2.5-flash",
+ "seed": 21,
+ "H": 3,
+ "tag": "certified-deep",
+ "exploration": [
+  {
+   "init": {
+    "p": 0.5,
+    "seed": 1,
+    "kind": "soup"
+   },
+   "t": 10,
+   "record": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    9
+   ]
+  },
+  {
+   "init": {
+    "cells": [
+     [
+      15,
+      15
+     ]
+    ],
+    "kind": "pattern"
+   },
+   "t": 15,
+   "record": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+   ]
+  },
+  {
+   "init": {
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ],
+     [
+      16,
+      15
+     ],
+     [
+      16,
+      16
+     ]
+    ],
+    "kind": "pattern"
+   },
+   "t": 10,
+   "record": [
+    0,
+    2,
+    4,
+    6,
+    8
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      14
+     ],
+     [
+      15,
+      16
+     ],
+     [
+      14,
+      15
+     ],
+     [
+      16,
+      15
+     ]
+    ]
+   },
+   "t": 10,
+   "record": [
+    0,
+    2,
+    4,
+    6,
+    8
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      14
+     ],
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ]
+    ]
+   },
+   "t": 10,
+   "record": [
+    0,
+    2,
+    4,
+    6,
+    8
+   ]
+  },
+  {
+   "init": {
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ]
+    ],
+    "kind": "pattern"
+   },
+   "t": 10,
+   "record": [
+    0,
+    2,
+    4,
+    6,
+    8
+   ]
+  }
+ ],
+ "prediction": {
+  "pred_err": 0.3634,
+  "persistence_err": 0.311,
+  "invalid_replies": 0,
+  "n_probes": 6
+ },
+ "declaration": {
+  "parsed": true,
+  "declaration": {
+   "visible_frame_sufficient": false,
+   "n_hidden_states": 1,
+   "hidden_update_rule": "Each cell has a hidden 'age' state; new cells are born with age 0, and if a cell's age reaches 2 without specific neighbor conditions being met, it dies. Cells are 'rejuvenated' (their age resets to 0) if certain neighbor conditions are met, otherwise their age increments.",
+   "mechanism": "A cell becomes alive or remains alive based on the local neighborhood configuration and its hidden 'age' state. Specifically, a cell appears to be 'born' (age 0) if a critical number of neighbors are present, and it dies if it ages two steps (age becomes 2) without sufficient neighbors to reset its age.",
+   "confidence": 0.8
+  },
+  "truth": {
+   "markov": false,
+   "effective_H": 3
+  },
+  "posited_latent": true,
+  "h_match": false,
+  "confidence": 0.8
+ },
+ "declaration_raw": "{\"visible_frame_sufficient\": false, \"n_hidden_states\": 1, \"hidden_update_rule\": \"Each cell has a hidden 'age' state; new cells are born with age 0, and if a cell's age reaches 2 without specific neighbor conditions being met, it dies. Cells are 'rejuvenated' (their age resets to 0) if certain neighbor conditions are met, otherwise their age increments.\", \"mechanism\": \"A cell becomes alive or remains alive based on the local neighborhood configuration and its hidden 'age' state. Specifically, a cell appears to be 'born' (age 0) if a critical number of neighbors are present, and it dies if it ages two steps (age becomes 2) without sufficient neighbors to reset its age.\", \"confidence\": 0.8}"
+}

@@ -1,0 +1,191 @@
+{
+ "model": "openai/gpt-5.4",
+ "seed": 21,
+ "H": 3,
+ "tag": "certified-deep",
+ "exploration": [
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ],
+     [
+      16,
+      15
+     ],
+     [
+      16,
+      16
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ],
+     [
+      15,
+      17
+     ]
+    ]
+   },
+   "t": 4,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      14
+     ],
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ],
+     [
+      14,
+      15
+     ],
+     [
+      16,
+      15
+     ]
+    ]
+   },
+   "t": 3,
+   "record": [
+    0,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "init": {
+    "kind": "pattern",
+    "cells": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      16
+     ],
+     [
+      16,
+      16
+     ]
+    ]
+   },
+   "t": 5,
+   "record": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "init": {
+    "kind": "soup",
+    "p": 0.2,
+    "seed": 1
+   },
+   "t": 3,
+   "record": [
+    0,
+    1,
+    2,
+    3
+   ]
+  }
+ ],
+ "prediction": {
+  "pred_err": 0.4214,
+  "persistence_err": 0.311,
+  "invalid_replies": 1,
+  "n_probes": 6
+ },
+ "declaration": {
+  "parsed": true,
+  "declaration": {
+   "visible_frame_sufficient": false,
+   "n_hidden_states": 2,
+   "hidden_update_rule": "Each cell carries a one-bit refractory/age flag indicating whether a currently visible live cell was just born this step or survived from the previous step; newborn live cells can survive one more step while older live cells die, and dead cells clear the flag.",
+   "mechanism": "Births follow Conway Life's Moore-neighborhood rule B3. Visible dynamics are therefore close to Life, but with live cells lasting at most two steps: a dead cell with exactly three live neighbors becomes alive, a live cell survives only if it is in its first visible step and has exactly two or three neighbors, and any older live cell dies regardless.",
+   "confidence": 0.74
+  },
+  "truth": {
+   "markov": false,
+   "effective_H": 3
+  },
+  "posited_latent": true,
+  "h_match": false,
+  "confidence": 0.74
+ },
+ "declaration_raw": "{\"visible_frame_sufficient\":false,\"n_hidden_states\":2,\"hidden_update_rule\":\"Each cell carries a one-bit refractory/age flag indicating whether a currently visible live cell was just born this step or survived from the previous step; newborn live cells can survive one more step while older live cells die, and dead cells clear the flag.\",\"mechanism\":\"Births follow Conway Life's Moore-neighborhood rule B3. Visible dynamics are therefore close to Life, but with live cells lasting at most two steps: a dead cell with exactly three live neighbors becomes alive, a live cell survives only if it is in its first visible step and has exactly two or three neighbors, and any older live cell dies regardless.\",\"confidence\":0.74}",
+ "submitted_model": {
+  "parsed": true,
+  "model_err": 0.4147,
+  "n_hidden": 2
+ },
+ "submitted_model_raw": "{\"n_hidden\":2,\"birth\":[[3],[3]],\"survive\":[[2,3],[]],\"h_next\":[[0,1],[0,0]]}"
+}
