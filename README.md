@@ -1,5 +1,7 @@
 # discoverybench
 
+**Status (2026-09-22):** the hidden-dial Life phase is archived under `attic/` with its results and standing beliefs. The next world (layered, conserved balls on a grid) is being designed. `ideas/` holds the owner's intuitions, `research/` the literature.
+
 A benchmark for **world-model induction**: can an agent watch a small hidden-rule
 world, form a theory of it, and prove the theory by running the right experiment?
 
@@ -17,7 +19,7 @@ hidden:   h' = machine[h][signal]      signal = own v  ("own")  or  1{count >= t
 
 Everything is generated from a seed, so the ground truth is owned and exact.
 
-## What we found so far (`wmi/phase0`)
+## What we found so far (archived in `attic/2026-09-22-hidden-dial-life`)
 
 1. **The hidden dial is real.** A visible-only predictor with 8 frames of history
    still mispredicts up to 25% of cells on many worlds; given the true dial it is exact.
@@ -31,7 +33,7 @@ Everything is generated from a seed, so the ground truth is owned and exact.
 ## Layout
 
 ```
-wmi/phase0/
+attic/2026-09-22-hidden-dial-life/
   spec.py       world definition + seeded sampler
   drivers.py    the hidden-dial signal (one definition shared by simulator and theorist)
   sim.py        ground-truth simulator (reduces to Life at H=1)
@@ -49,7 +51,7 @@ wmi/docs/plans  design notes
 ## Run
 
 ```
-cd wmi/phase0
+cd attic/2026-09-22-hidden-dial-life
 python3 -m pytest test_wmi.py -q     # ~1-2 min
 python3 active.py own 20             # which worlds are passively ambiguous but poke-separable
 python3 certify.py                   # old certificate
